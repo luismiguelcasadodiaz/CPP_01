@@ -6,7 +6,7 @@
 #    By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 13:07:33 by luicasad          #+#    #+#              #
-#    Updated: 2024/12/21 11:27:08 by luicasad         ###   ########.fr        #
+#    Updated: 2024/12/23 16:52:02 by luicasad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ DARK_YELLOW		=	\033[38;5;143m
 #                                 TARGETS                                      #
 # ============================================================================ #
 
-TARGET			= tests
+TARGET			= main
 OBJDIR 			= ./obj/
 
 REQUIRED_DIRS	= $(OBJDIR)
@@ -48,8 +48,9 @@ CFLGS			= $(DBGFL) $(WRNFL) -c
 LFLGS 			= #-fsanitize=address
 
 
-SRCS_TARGET	= 	tests.cpp \
-				Account.cpp
+SRCS_TARGET	= 	main.cpp \
+				Zombie.class.cpp \
+				zombieHorde.cpp
 
 
 FILE_TARGET = $(addprefix $(SRCDIR_TARGET), $(SRCS_TARGET))
@@ -63,7 +64,7 @@ $(info patha $(DEPE_TARGET))
 # ============================================================================ #
 #                                 RULES                                        #
 # ============================================================================ #
-all: makedirs $(TARGET)
+all: makedirs $(TARGET) Makefile
 -include $(DEPE_TARGET)
 
 # .......................... directories creation ............................ #
