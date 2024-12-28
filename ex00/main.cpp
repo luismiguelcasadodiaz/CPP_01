@@ -17,9 +17,9 @@ Zombie *newZombie (std::string name);
 
 int	main(void)
 {
-	Zombie *zombie_three = new Zombie("Zombie ONE");
+	Zombie *zombie_one = new Zombie("Zombie ONE");
 
 	randomChump("Zombie TWO");
-	delete zombie_three;
+	delete zombie_one;
 	return (0);
 }

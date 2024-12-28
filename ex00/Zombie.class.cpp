@@ -14,13 +14,13 @@
 
 Zombie::Zombie(void)
 {
-	this->setName("Anonymous");
+	this->_name = "Anonymous";
 	this->_showMe();
 }
 
 Zombie::Zombie(std::string one_name)
 {
-	this->setName(one_name);
+	this->_name = one_name;
 	this->_showMe();
 }
 

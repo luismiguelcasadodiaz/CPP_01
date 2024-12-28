@@ -12,6 +12,7 @@
 
 #include "Zombie.class.hpp"
 
+// Memory statically. The zombie only exists inside the function's scope
 void	randomChump(std::string name)
 {
 	Zombie zombie_two(name);
@@ -19,6 +20,6 @@ void	randomChump(std::string name)
 
 	zombie_two.announce();
 	zombie_three.announce();
-	zombie_three.setName("Zombie TWO");
+	zombie_three.setName("Zombie THREE");
 	zombie_three.announce();
 }

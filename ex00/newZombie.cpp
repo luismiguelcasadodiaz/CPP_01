@@ -12,6 +12,7 @@
 
 #include "Zombie.class.hpp"
 
+//Allocate dynamically cause the function returns a Zombie
 Zombie *newZombie (std::string name)
 {
 	Zombie *the_zombie = new Zombie(name);
