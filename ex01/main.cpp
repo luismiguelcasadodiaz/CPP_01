@@ -16,17 +16,19 @@ Zombie *zombieHorde (int N, std::string name);
 
 int	main(void)
 {
-	const int	N = 5;
+	const int	N = -5;
 	Zombie *zombies = zombieHorde(N, "Zombie member");
 	Zombie *one_zombie;
 
-	one_zombie = zombies;
-	while (one_zombie < zombies + N)
+	if (zombies != NULL)
 	{
-		one_zombie->announce();
-		one_zombie++;
+		one_zombie = zombies;
+		while (one_zombie < zombies + N)
+		{
+			one_zombie->announce();
+			one_zombie++;
+		}
+		delete [] zombies;
 	}
-
-	delete [] zombies;
 	return (0);
 }
