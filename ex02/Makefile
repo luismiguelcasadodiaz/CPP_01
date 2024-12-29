@@ -33,7 +33,7 @@ DARK_YELLOW		=	\033[38;5;143m
 #                                 TARGETS                                      #
 # ============================================================================ #
 
-TARGET			= tests
+TARGET			= main
 OBJDIR 			= ./obj/
 
 REQUIRED_DIRS	= $(OBJDIR)
@@ -48,8 +48,8 @@ CFLGS			= $(DBGFL) $(WRNFL) -c
 LFLGS 			= #-fsanitize=address
 
 
-SRCS_TARGET	= 	tests.cpp \
-				Account.cpp
+SRCS_TARGET	= 	main.cpp
+				
 
 
 FILE_TARGET = $(addprefix $(SRCDIR_TARGET), $(SRCS_TARGET))
