@@ -11,13 +11,17 @@ HumanB::~HumanB(void)
 {
     
 }
-
+// As constructor works without weapon, i have to control its existence
+// to avoid a segmentation fault
 void HumanB::attack()
 {
-    std::cout << this->_name << " attacks with their " << this->_myweapon->getType() << std::endl;
+    if (this->_myweapon != 0)
+        std::cout << this->_name << " attacks with their " << this->_myweapon->getType() << std::endl;
+    else
+        std::cout << this->_name << " has not weapon" << std::endl;
 }
 
-void HumanB::setWeapon(Weapon &theweapon)
-{
-    *this->_myweapon = theweapon;
+void HumanB::setWeapon(Weapon& theweapon)
+{ 
+    this->_myweapon = &theweapon;
 }

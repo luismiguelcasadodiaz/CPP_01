@@ -3,13 +3,13 @@
 Weapon::Weapon(std::string thetype)
 {
     this->_type = thetype;
-    std::cout << thetype << " Weapon" << std::endl;
+    //std::cout << thetype << " Weapon" << std::endl;
 }
 
 Weapon::Weapon(void)
 {
     this->_type = "Anonymous";
-    std::cout << "Anonymous Weapon" << std::endl;
+    //std::cout << "Anonymous Weapon" << std::endl;
 }
 
 Weapon::~Weapon(void)
