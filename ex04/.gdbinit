@@ -51,4 +51,4 @@ break main
 #break is_scene4.c:71 if ((wy0 == 300) && (wx0 ==600))
 #break ray_shadow.c:48
 #break ray_color.c:52
-#run  scenes/MANDATORY/test_cuadrado.rt
+run test1.txt a b
